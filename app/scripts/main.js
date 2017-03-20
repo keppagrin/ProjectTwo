@@ -17,7 +17,7 @@ $(document).ready(function(){
 	var stage = new PIXI.Container();
 
 	//create props (sprites)
-	var aquarium = PIXI.Sprite.fromImage('images/ac_aquarium.jpg');
+	var aquarium = PIXI.Sprite.fromImage('images/awooo.jpg');
 
 	//set up the prop
 	aquarium.anchor.x = 0.5;
@@ -26,6 +26,16 @@ $(document).ready(function(){
 	aquarium.position.y = 200;
 	//set the stage
 	stage.addChild(aquarium);
+
+	//text
+	var text = new PIXI.Text("Welcome", {font:"50px Arial", dropShadow: true, fill:"white"});
+
+	text.anchor.x = 0;
+	text.anchor.y = 0;
+	text.position.x = 0;
+	text.position.y = 0;
+
+	stage.addChild(text);
 
 	//call a function to show the stage
 	render();
@@ -59,6 +69,12 @@ $(document).ready(function(){
 		//basic Pixi animation function
 		aquarium.rotation += .001;
 
+		if(text.position.x < 400){
+			text.position.x += 1;
+		}
+		else{
+			text.position.x = -200;
+		}
 		
 	}
 });
