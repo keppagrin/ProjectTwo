@@ -28,7 +28,7 @@ $(document).ready(function(){
 	stage.addChild(aquarium);
 
 	//text
-	var text = new PIXI.Text("Welcome", {font:"50px Arial", dropShadow: true, fill:"white"});
+	var text = new PIXI.Text("Awooooo", {font:"50px Arial", dropShadow: true, fill:"white"});
 
 	text.anchor.x = 0;
 	text.anchor.y = 0;
